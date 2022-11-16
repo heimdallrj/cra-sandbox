@@ -10,7 +10,7 @@ import { masterStylesheet } from './theme';
 import './normalize.css';
 
 const style = {
-  '--primary-color': '#233142',
+  '--primary-color': 'rgb(25, 118, 210)',
   '--secondary-color': '#455D79',
   '--tertiary-color': '#F95959',
   '--quaternary-color': '#E3E3E3',

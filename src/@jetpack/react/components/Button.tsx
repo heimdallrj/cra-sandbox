@@ -5,6 +5,7 @@ type Props = {
   children: React.ReactNode;
   type?: 'button' | 'reset' | 'submit';
   variant?: 'contained' | 'outlined' | 'text';
+  disabled?: boolean;
   size?: 'default' | 'large' | 'small';
   color?:
     | 'primary'
@@ -40,7 +41,7 @@ type Props = {
 export default function Button({
   children,
   type = 'button',
-  color = 'primary',
+  variant = 'contained',
   ...restProps
 }: Props) {
   const { prefix } = useContext(ThemeContext);
@@ -48,7 +49,7 @@ export default function Button({
     <button
       {...restProps}
       type={type}
-      className={`${prefix}-btn ${prefix}-btn--default ${prefix}-btn--${color} ${prefix}-btn--contained`}
+      className={`${prefix}-btn ${prefix}-btn--${variant}`}
     >
       {children}
     </button>
