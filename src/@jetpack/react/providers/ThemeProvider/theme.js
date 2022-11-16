@@ -82,13 +82,22 @@ table {
     border: 0px;
     box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
     color: rgb(255, 255, 255);
-    padding: 6px 16px;
+
+    &-small {
+      padding: 4px 10px;
+    }
+    &-medium {
+      padding: 6px 16px;
+    }
+    &-large {
+      padding: 8px 22px;
+    }
 
     &:disabled,
     &[disabled] {
-      color: rgba(0, 0, 0, 0.26);
-      box-shadow: none;
       background-color: rgba(0, 0, 0, 0.12);
+      box-shadow: none;
+      color: rgba(0, 0, 0, 0.26);
     }
   }
   &--outlined {
@@ -96,20 +105,38 @@ table {
     border: 1px solid rgba(25, 118, 210, 0.5);
     box-shadow: none;
     color: rgb(25, 118, 210);
-    padding: 5px 15px;
+
+    &-small {
+      padding: 3px 9px;
+    }
+    &-medium {
+      padding: 5px 15px;
+    }
+    &-large {
+      padding: 7px 21px;
+    }
 
     &:disabled,
     &[disabled] {
-      color: rgba(0, 0, 0, 0.26);
       border: 1px solid rgba(0, 0, 0, 0.26);
+      color: rgba(0, 0, 0, 0.26);
     }
   }
   &--text {
     background-color: transparent;
     border: 0px;
-    padding: 6px 8px;
     border-radius: 4px;
     color: rgb(25, 118, 210);
+
+    &-small {
+      padding: 4px 5px;
+    }
+    &-medium {
+      padding: 6px 8px;
+    }
+    &-large {
+      padding: 8px 11px;
+    }
 
     &:disabled,
     &[disabled] {
@@ -117,8 +144,8 @@ table {
     }
 
     &:hover {
-      text-decoration: none;
       background-color: rgba(25, 118, 210, 0.04);
+      text-decoration: none;
     }
   }
 }

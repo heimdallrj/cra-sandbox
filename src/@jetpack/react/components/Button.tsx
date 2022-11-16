@@ -1,55 +1,36 @@
-import React, { useContext } from 'react';
-import { ThemeContext } from 'styled-components';
+import clsx from 'clsx';
+import React from 'react';
 
-type Props = {
+import useConfig from '../hooks/useConfig';
+
+interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
+  className?: string;
+  size?: 'small' | 'medium' | 'large';
   type?: 'button' | 'reset' | 'submit';
   variant?: 'contained' | 'outlined' | 'text';
-  disabled?: boolean;
-  size?: 'default' | 'large' | 'small';
-  color?:
-    | 'primary'
-    | 'secondary'
-    | 'success'
-    | 'error'
-    | 'info'
-    | 'warning'
-    | 'text';
-  calssName?: string;
-  // Globals
-  accessKey?: string;
-  autoCapitalize?: 'off' | 'none' | 'on' | 'sentences' | 'words' | 'characters';
-  autoFocus?: boolean;
-  contentEditable?: boolean;
-  contextMenu?: string;
-  dir?: 'ltr' | 'rtl' | 'auto';
-  draggable?: boolean;
-  enterKeyHint?: string;
-  hidden?: boolean;
-  id?: string;
-  inputMode?:
-    | 'none'
-    | 'text'
-    | 'decimal'
-    | 'numeric'
-    | 'tel'
-    | 'search'
-    | 'email'
-    | 'url';
-};
+}
 
 export default function Button({
   children,
+  className,
+  size = 'medium',
   type = 'button',
   variant = 'contained',
   ...restProps
 }: Props) {
-  const { prefix } = useContext(ThemeContext);
+  // @todo: avoid multiple uses
+  const { prefix } = useConfig();
   return (
     <button
       {...restProps}
       type={type}
-      className={`${prefix}-btn ${prefix}-btn--${variant}`}
+      className={clsx(
+        `${prefix}-btn`,
+        `${prefix}-btn--${variant}`,
+        `${prefix}-btn--${variant}-${size}`,
+        className
+      )}
     >
       {children}
     </button>

@@ -53,12 +53,12 @@ export default function ButtonSpec() {
       <div>
         <strong>color</strong>
         <Row gap={5}>
-          <Button color='primary'>primary</Button>
-          <Button color='secondary'>secondary</Button>
+          <Button>primary</Button>
+          {/* <Button color='secondary'>secondary</Button>
           <Button color='success'>success</Button>
           <Button color='error'>error</Button>
           <Button color='info'>info</Button>
-          <Button color='warning'>warning</Button>
+          <Button color='warning'>warning</Button> */}
         </Row>
       </div>
 

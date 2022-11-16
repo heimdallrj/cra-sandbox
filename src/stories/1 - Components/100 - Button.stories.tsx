@@ -21,6 +21,11 @@ export default {
     disabled: {
       control: { type: 'boolean' },
     },
+    size: {
+      control: { type: 'select' },
+      options: ['small', 'medium', 'large'],
+    },
+    onClick: { action: 'clicked' },
   },
   parameters: {
     docs: {
@@ -39,7 +44,4 @@ const Template: ComponentStory<typeof Button> = ({
 export const Story = Template.bind({});
 Story.args = {
   children: 'Hello',
-  type: 'button',
-  variant: 'contained',
-  disabled: false,
 };
