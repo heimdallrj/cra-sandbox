@@ -1,4 +1,4 @@
-import { Block, Text } from '@jetpack/react/components';
+import { Block, Text } from '@jetpack/react';
 
 export default function TableSpec() {
   return (

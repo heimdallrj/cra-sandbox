@@ -7,7 +7,7 @@ import {
   TableHeader,
   TableRow,
   Text,
-} from '@jetpack/react/components';
+} from '@jetpack/react';
 
 export default function TextSpec() {
   return (
