@@ -187,6 +187,11 @@ time {}
   align-items: center;
   gap: 5px;
 
+  &--cheched {}
+  &--disabled {
+    color: #d1d1d1;
+  }
+
   &__input {}
   &__label {}
 }
@@ -196,7 +201,7 @@ time {}
   display: flex;
   align-items: center;
   gap: 5px;
-  
+
   &__input {}
   &__label {}
 }

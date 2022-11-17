@@ -1,9 +1,8 @@
 import clsx from 'clsx';
 import React from 'react';
-
 import useConfig from '../hooks/useConfig';
 
-interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   className?: string;
   size?: 'small' | 'medium' | 'large';
@@ -18,8 +17,7 @@ export default function Button({
   type = 'button',
   variant = 'contained',
   ...restProps
-}: IProps) {
-  // @todo: avoid multiple uses
+}: ButtonProps) {
   const { prefix } = useConfig();
 
   return (
