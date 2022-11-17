@@ -6,7 +6,20 @@ import { Radio } from '@jetpack/react';
 export default {
   title: 'Components/Radio',
   component: Radio,
-  argTypes: {},
+  argTypes: {
+    checked: {
+      control: { type: 'boolean' },
+    },
+    disabled: {
+      control: { type: 'boolean' },
+    },
+    label: {
+      control: { type: 'text' },
+    },
+    value: {
+      control: { type: 'text' },
+    },
+  },
   parameters: {
     docs: {
       page: null,
@@ -19,4 +32,9 @@ const Template: ComponentStory<typeof Radio> = ({ children, ...args }: any) => {
 };
 
 export const Story = Template.bind({});
-Story.args = {};
+Story.args = {
+  checked: false,
+  disabled: false,
+  label: '',
+  value: 'someValue',
+};

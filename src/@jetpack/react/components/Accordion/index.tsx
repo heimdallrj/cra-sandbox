@@ -15,16 +15,16 @@ export function AccordionItem({ children, title }: any) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={`${prefix}-accordion-item`}>
+    <div className={`${prefix}-accordion__item`}>
       <div
-        className={`${prefix}-accordion-title`}
+        className={`${prefix}-accordion__title`}
         onClick={() => setIsOpen(!isOpen)}
       >
         <div>{title}</div>
         <div>{isOpen ? '-' : '+'}</div>
       </div>
       {isOpen && (
-        <div className={`${prefix}-accordion-content`}>{children}</div>
+        <div className={`${prefix}-accordion__content`}>{children}</div>
       )}
     </div>
   );

@@ -21,11 +21,11 @@ export default function Checkbox({
       <input
         {...restProps}
         type='checkbox'
-        className={`${prefix}-checkbox-input`}
+        className={`${prefix}-checkbox__input`}
         value={value}
         checked={checked}
       />
-      {label && <label className={`${prefix}-checkbox-label`}>{label}</label>}
+      {label && <label className={`${prefix}-checkbox__label`}>{label}</label>}
     </div>
   );
 }

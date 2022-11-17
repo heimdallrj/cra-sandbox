@@ -86,9 +86,9 @@ time {}
 .{prefix}-accordion {
   display: flex;
   flex-direction: column;
-  .{prefix}-accordion-item {
+  .{prefix}-accordion__item {
   }
-  .{prefix}-accordion-title {
+  .{prefix}-accordion__title {
     background: rgb(0 0 0 / 20%);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -98,7 +98,7 @@ time {}
     justify-content: space-between;
     padding: 10px;
   }
-  .{prefix}-accordion-content {
+  .{prefix}-accordion__content {
     padding: 10px;
   }
 }
@@ -106,19 +106,19 @@ time {}
 /* Custom:Button */
 .{prefix}-btn {
   border-radius: 4px;
-  &--contained {
+  &__contained {
     background-color: rgb(25, 118, 210);
     border: 0px;
     box-shadow: rgb(0 0 0 / 20%) 0px 3px 1px -2px, rgb(0 0 0 / 14%) 0px 2px 2px 0px, rgb(0 0 0 / 12%) 0px 1px 5px 0px;
     color: rgb(255, 255, 255);
 
-    &-small {
+    &--small {
       padding: 4px 10px;
     }
-    &-medium {
+    &--medium {
       padding: 6px 16px;
     }
-    &-large {
+    &--large {
       padding: 8px 22px;
     }
 
@@ -129,19 +129,19 @@ time {}
       color: rgba(0, 0, 0, 0.26);
     }
   }
-  &--outlined {
+  &__outlined {
     background-color: transparent;
     border: 1px solid rgba(25, 118, 210, 0.5);
     box-shadow: none;
     color: rgb(25, 118, 210);
 
-    &-small {
+    &--small {
       padding: 3px 9px;
     }
-    &-medium {
+    &--medium {
       padding: 5px 15px;
     }
-    &-large {
+    &--large {
       padding: 7px 21px;
     }
 
@@ -151,19 +151,19 @@ time {}
       color: rgba(0, 0, 0, 0.26);
     }
   }
-  &--text {
+  &__text {
     background-color: transparent;
     border: 0px;
     border-radius: 4px;
     color: rgb(25, 118, 210);
 
-    &-small {
+    &--small {
       padding: 4px 5px;
     }
-    &-medium {
+    &--medium {
       padding: 6px 8px;
     }
-    &-large {
+    &--large {
       padding: 8px 11px;
     }
 
@@ -179,13 +179,25 @@ time {}
   }
 }
 
+/* Custom:Checkbox */
+.{prefix}-checkbox {
+  &__input {}
+  &__label {}
+}
+
+/* Custom:Radio */
+.{prefix}-radio {
+  &__input {}
+  &__label {}
+}
+
 /* Custom:Tabs */
 .{prefix}-tabs {
   .{prefix}-tab {
     border-bottom: 1px solid #ccc;
     padding-left: 0;
 
-    &-button {
+    &__button {
       cursor: pointer;
       display: inline-block;
       list-style: none;
@@ -193,7 +205,7 @@ time {}
       padding: 0.5rem 0.75rem;
     }
 
-    &-active {
+    &--active {
       background-color: white;
       border: solid #ccc;
       border-width: 1px 1px 0 1px;

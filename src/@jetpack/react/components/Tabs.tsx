@@ -13,8 +13,8 @@ export const Tab = ({ label, selectedTab, onClick }: any) => {
   return (
     <li
       className={clsx(
-        `${prefix}-tab-button`,
-        selectedTab === label && `${prefix}-tab-active`
+        `${prefix}-tab__button`,
+        selectedTab === label && `${prefix}-tab--active`
       )}
       onClick={selectTabHandler}
     >
@@ -51,7 +51,7 @@ export const Tabs = ({ children }: any) => {
           );
         })}
       </ol>
-      <div className={`${prefix}-tab-content`}>
+      <div className={`${prefix}-tab__content`}>
         {children.map((child: any) => {
           if (child.props.label !== selectedTab) return undefined;
           return child.props.children;

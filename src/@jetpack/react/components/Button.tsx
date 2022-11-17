@@ -28,8 +28,8 @@ export default function Button({
       type={type}
       className={clsx(
         `${prefix}-btn`,
-        `${prefix}-btn--${variant}`,
-        `${prefix}-btn--${variant}-${size}`,
+        `${prefix}-btn__${variant}`,
+        `${prefix}-btn__${variant}--${size}`,
         className
       )}
     >
