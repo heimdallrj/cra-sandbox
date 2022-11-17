@@ -17,13 +17,13 @@ export default {
 const Template: ComponentStory<typeof Tabs> = ({ children, ...args }: any) => {
   return (
     <Tabs>
-      <Tab label='Gator'>
+      <Tab title='Gator'>
         See ya later, <em>Alligator</em>!
       </Tab>
-      <Tab label='Croc'>
+      <Tab title='Croc'>
         After 'while, <em>Crocodile</em>!
       </Tab>
-      <Tab label='Sarcosuchus'>
+      <Tab title='Sarcosuchus'>
         Nothing to see here, this tab is <em>extinct</em>!
       </Tab>
     </Tabs>

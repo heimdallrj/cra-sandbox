@@ -1,6 +1,5 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
 import { Accordion, AccordionItem } from '@jetpack/react';
 
 export default {
@@ -13,7 +12,8 @@ export default {
   },
 } as ComponentMeta<typeof Accordion>;
 
-const Template: ComponentStory<typeof Accordion> = ({ children }: any) => {
+// eslint-disable-next-line no-empty-pattern
+const Template: ComponentStory<typeof Accordion> = ({}) => {
   return (
     <Accordion>
       <AccordionItem title='Item 1'>Item 1 Contents</AccordionItem>

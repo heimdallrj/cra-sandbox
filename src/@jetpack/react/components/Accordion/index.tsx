@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
 import useConfig from '../../hooks/useConfig';
 
-type Props = {
+type AccordionProps = {
   children: React.ReactNode;
 };
 
-export function Accordion({ children }: Props) {
+export function Accordion({ children }: AccordionProps) {
   const { prefix } = useConfig();
   return <div className={`${prefix}-accordion`}>{children}</div>;
 }
 
-export function AccordionItem({ children, title }: any) {
+type AccordionItemProps = {
+  children: React.ReactNode;
+  title: string;
+};
+
+export function AccordionItem({ children, title }: AccordionItemProps) {
   const { prefix } = useConfig();
   const [isOpen, setIsOpen] = useState(false);
 

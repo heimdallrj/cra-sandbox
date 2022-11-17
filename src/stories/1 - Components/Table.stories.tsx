@@ -64,7 +64,4 @@ const Template: ComponentStory<typeof Table> = ({ children, ...args }: any) => {
 };
 
 export const Story = Template.bind({});
-Story.args = {
-  children: 'Hello World!',
-  variant: 'p',
-};
+Story.args = {};
