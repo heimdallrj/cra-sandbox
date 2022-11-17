@@ -27,7 +27,7 @@ export default function Checkbox({
     <div
       className={clsx(
         `${prefix}-checkbox`,
-        checked && `${prefix}-checkbox--cheched`,
+        checked && `${prefix}-checkbox--checked`,
         disabled && `${prefix}-checkbox--disabled`,
         className
       )}
