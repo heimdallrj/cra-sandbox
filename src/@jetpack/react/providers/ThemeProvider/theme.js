@@ -75,8 +75,6 @@ table {
 /* Button */
 .{prefix}-btn {
   border-radius: 4px;
-
-  /* Variant */
   &--contained {
     background-color: rgb(25, 118, 210);
     border: 0px;

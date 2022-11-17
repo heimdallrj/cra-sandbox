@@ -21,6 +21,7 @@ export default function Button({
 }: Props) {
   // @todo: avoid multiple uses
   const { prefix } = useConfig();
+
   return (
     <button
       {...restProps}
