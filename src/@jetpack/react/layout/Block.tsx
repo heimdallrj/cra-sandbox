@@ -1,6 +1,13 @@
 import React from 'react';
 
-type Props = {
+interface IProps
+  extends React.ButtonHTMLAttributes<
+    | HTMLDivElement
+    | HTMLDetailsElement
+    | HTMLPreElement
+    | HTMLSelectElement
+    | HTMLTimeElement
+  > {
   children: React.ReactNode;
   variant?:
     | 'aside' // Defines content aside from the page content
@@ -19,8 +26,12 @@ type Props = {
     | 'section' // Defines a section in a document
     | 'summary' // Defines a visible heading for a <details> element
     | 'time'; // Defines a date/time
-};
+}
 
-export default function Block({ children, variant = 'div', ...props }: Props) {
-  return React.createElement(variant, props, children);
+export default function Block({
+  children,
+  variant = 'div',
+  ...restProps
+}: IProps) {
+  return React.createElement(variant, restProps, children);
 }

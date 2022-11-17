@@ -20,7 +20,7 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <ThemeProvider config={{ prefix: 'jp', theme: {} }}>
+    <ThemeProvider config={{ prefix: 'jpk', theme: {} }}>
       <Story />
     </ThemeProvider>
   ),

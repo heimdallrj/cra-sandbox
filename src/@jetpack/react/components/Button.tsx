@@ -3,7 +3,7 @@ import React from 'react';
 
 import useConfig from '../hooks/useConfig';
 
-interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
   className?: string;
   size?: 'small' | 'medium' | 'large';
@@ -18,7 +18,7 @@ export default function Button({
   type = 'button',
   variant = 'contained',
   ...restProps
-}: Props) {
+}: IProps) {
   // @todo: avoid multiple uses
   const { prefix } = useConfig();
 

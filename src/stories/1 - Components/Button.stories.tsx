@@ -43,4 +43,8 @@ const Template: ComponentStory<typeof Button> = ({
 export const Story = Template.bind({});
 Story.args = {
   children: 'Hello',
+  disabled: false,
+  size: 'medium',
+  type: 'button',
+  variant: 'contained',
 };

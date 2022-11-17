@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-type RowProps = {
+interface IProps {
   gap?: number;
-};
-const Row = styled.div<RowProps>`
+}
+const Col = styled.div<IProps>`
   display: flex;
   justify-content: flex-start;
-  flex-direction: row;
+  flex-direction: column;
   gap: ${({ gap }) => gap || 0}px;
 `;
 
-export default Row;
+export default Col;

@@ -1,7 +1,8 @@
 export const masterStylesheet = `html {}
+aside {}
+article {}
+b {}
 body {}
-h1, h2, h3, h4, h5, h6 {}
-p {}
 button {
   appearance: none;
   box-sizing: border-box;
@@ -24,7 +25,30 @@ button[disabled] {
   color: rgba(0, 0, 0, 0.26);
   cursor: default;
 }
-/* Table Styles */
+code {}
+del {}
+div {}
+details {}
+em {}
+figcaption {}
+figure {}
+footer {}
+h1, h2, h3, h4, h5, h6 {}
+header {}
+i {}
+ins {}
+main {}
+mark {}
+nav {}
+p {}
+pre {}
+section {}
+small {}
+span {}
+strong {}
+sub {}
+summary {}
+sup {}
 table {
   border-collapse: collapse;
   margin: 25px 0;
@@ -54,7 +78,9 @@ table {
     }
   } 
 }
-/* Accordion Styles */
+time {}
+
+/* Custom:Accordion */
 .{prefix}-accordion {
   display: flex;
   flex-direction: column;
@@ -72,7 +98,8 @@ table {
     padding: 10px;
   }
 }
-/* Button */
+
+/* Custom:Button */
 .{prefix}-btn {
   border-radius: 4px;
   &--contained {
@@ -147,4 +174,26 @@ table {
     }
   }
 }
+
+/* Custom:Tabs */
+.{prefix}-tabs {
+  .{prefix}-tab {
+    border-bottom: 1px solid #ccc;
+    padding-left: 0;
+
+    &-button {
+      cursor: pointer;
+      display: inline-block;
+      list-style: none;
+      margin-bottom: -1px;
+      padding: 0.5rem 0.75rem;
+    }
+
+    &-active {
+      background-color: white;
+      border: solid #ccc;
+      border-width: 1px 1px 0 1px;
+    }
+  }
+ }
 `;

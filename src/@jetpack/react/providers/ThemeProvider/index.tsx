@@ -9,17 +9,6 @@ import { masterStylesheet } from './theme';
 
 import './normalize.css';
 
-const style = {
-  '--primary-color': 'rgb(25, 118, 210)',
-  '--secondary-color': '#455D79',
-  '--tertiary-color': '#F95959',
-  '--quaternary-color': '#E3E3E3',
-  '--success-color': 'blue',
-  '--error-color': 'red',
-  '--info-color': 'green',
-  '--warning-color': 'yellow',
-} as React.CSSProperties;
-
 type Props = {
   children: React.ReactNode;
   config: any;
@@ -35,11 +24,9 @@ export default function ThemeProvider({ children, config }: Props) {
   const GlobalStyle = createGlobalStyle`${masterStylesheetParsed}`;
 
   return (
-    <div style={style}>
-      <StyledProvider theme={{ prefix: config.prefix }}>
-        <GlobalStyle />
-        {children}
-      </StyledProvider>
-    </div>
+    <StyledProvider theme={{ prefix: config.prefix }}>
+      <GlobalStyle />
+      {children}
+    </StyledProvider>
   );
 }

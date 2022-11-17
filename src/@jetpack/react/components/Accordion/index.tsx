@@ -1,17 +1,17 @@
-import React, { useState, useContext } from 'react';
-import { ThemeContext } from 'styled-components';
+import useConfig from '@jetpack/react/hooks/useConfig';
+import React, { useState } from 'react';
 
 type Props = {
   children: React.ReactNode;
 };
 
-export default function Accordion({ children }: Props) {
-  const { prefix } = useContext(ThemeContext);
+export function Accordion({ children }: Props) {
+  const { prefix } = useConfig();
   return <div className={`${prefix}-accordion`}>{children}</div>;
 }
 
 export function AccordionItem({ children, title }: any) {
-  const { prefix } = useContext(ThemeContext);
+  const { prefix } = useConfig();
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -29,3 +29,5 @@ export function AccordionItem({ children, title }: any) {
     </div>
   );
 }
+
+export default Accordion;
