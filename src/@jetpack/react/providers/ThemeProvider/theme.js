@@ -36,6 +36,8 @@ footer {}
 h1, h2, h3, h4, h5, h6 {}
 header {}
 i {}
+input {}
+input[type='checkbox'] {}
 ins {}
 main {}
 mark {}
@@ -181,12 +183,20 @@ time {}
 
 /* Custom:Checkbox */
 .{prefix}-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
   &__input {}
   &__label {}
 }
 
 /* Custom:Radio */
 .{prefix}-radio {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  
   &__input {}
   &__label {}
 }
