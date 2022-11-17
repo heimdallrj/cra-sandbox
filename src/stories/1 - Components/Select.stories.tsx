@@ -17,7 +17,15 @@ const Template: ComponentStory<typeof Select> = ({
   children,
   ...args
 }: any) => {
-  return <Select />;
+  return (
+    <Select
+      options={[
+        { value: 'chocolate', label: 'Chocolate' },
+        { value: 'strawberry', label: 'Strawberry' },
+        { value: 'vanilla', label: 'Vanilla' },
+      ]}
+    />
+  );
 };
 
 export const Story = Template.bind({});

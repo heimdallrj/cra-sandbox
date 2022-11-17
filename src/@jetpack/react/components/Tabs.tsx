@@ -3,10 +3,10 @@ import { useEffect, useState } from 'react';
 
 import useConfig from '../hooks/useConfig';
 
-export const Tab = ({ onClick, label, selectedTab }: any) => {
+export const Tab = ({ label, selectedTab, onClick }: any) => {
   const { prefix } = useConfig();
 
-  const handleClick = () => {
+  const selectTabHandler = () => {
     onClick(label);
   };
 
@@ -16,7 +16,7 @@ export const Tab = ({ onClick, label, selectedTab }: any) => {
         `${prefix}-tab-button`,
         selectedTab === label && `${prefix}-tab-active`
       )}
-      onClick={handleClick}
+      onClick={selectTabHandler}
     >
       {label}
     </li>
@@ -25,7 +25,7 @@ export const Tab = ({ onClick, label, selectedTab }: any) => {
 
 export const Tabs = ({ children }: any) => {
   const { prefix } = useConfig();
-  const [selectedTab, setSelectedTab] = useState<any>(null);
+  const [selectedTab, setSelectedTab] = useState(null);
 
   useEffect(() => {
     setSelectedTab(children[0].props.label);
@@ -60,21 +60,3 @@ export const Tabs = ({ children }: any) => {
     </div>
   );
 };
-
-// export function Tabs({ children }: any) {
-//   const { prefix } = useConfig();
-
-//   return (
-//     <TabWrapper>
-//       <Tab label='Gator'>
-//         See ya later, <em>Alligator</em>!
-//       </Tab>
-//       <Tab label='Croc'>
-//         After 'while, <em>Crocodile</em>!
-//       </Tab>
-//       <Tab label='Sarcosuchus'>
-//         Nothing to see here, this tab is <em>extinct</em>!
-//       </Tab>
-//     </TabWrapper>
-//   );
-// }

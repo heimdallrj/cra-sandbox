@@ -6,7 +6,20 @@ import { Checkbox } from '@jetpack/react';
 export default {
   title: 'Components/Checkbox',
   component: Checkbox,
-  argTypes: {},
+  argTypes: {
+    checked: {
+      control: { type: 'boolean' },
+    },
+    disabled: {
+      control: { type: 'boolean' },
+    },
+    label: {
+      control: { type: 'text' },
+    },
+    value: {
+      control: { type: 'text' },
+    },
+  },
   parameters: {
     docs: {
       page: null,
@@ -22,4 +35,9 @@ const Template: ComponentStory<typeof Checkbox> = ({
 };
 
 export const Story = Template.bind({});
-Story.args = {};
+Story.args = {
+  checked: false,
+  disabled: false,
+  label: '',
+  value: 'someValue',
+};

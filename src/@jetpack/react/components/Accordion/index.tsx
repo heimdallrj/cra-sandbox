@@ -1,5 +1,5 @@
-import useConfig from '@jetpack/react/hooks/useConfig';
 import React, { useState } from 'react';
+import useConfig from '../../hooks/useConfig';
 
 type Props = {
   children: React.ReactNode;

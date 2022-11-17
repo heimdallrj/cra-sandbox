@@ -40,8 +40,10 @@ ins {}
 main {}
 mark {}
 nav {}
+option {}
 p {}
 pre {}
+select {}
 section {}
 small {}
 span {}
@@ -84,11 +86,13 @@ time {}
 .{prefix}-accordion {
   display: flex;
   flex-direction: column;
-  gap: 3px;
-  .{prefix}-accordion-item {}
+  .{prefix}-accordion-item {
+  }
   .{prefix}-accordion-title {
-    background-color: #505084;
-    color: white;
+    background: rgb(0 0 0 / 20%);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 0px 1px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
     cursor: pointer;
     display: flex;
     justify-content: space-between;

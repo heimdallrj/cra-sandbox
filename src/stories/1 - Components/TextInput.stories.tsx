@@ -6,7 +6,11 @@ import { TextInput } from '@jetpack/react';
 export default {
   title: 'Components/TextInput',
   component: TextInput,
-  argTypes: {},
+  argTypes: {
+    disabled: {
+      control: { type: 'boolean' },
+    },
+  },
   parameters: {
     docs: {
       page: null,
@@ -22,4 +26,6 @@ const Template: ComponentStory<typeof TextInput> = ({
 };
 
 export const Story = Template.bind({});
-Story.args = {};
+Story.args = {
+  disabled: false,
+};
