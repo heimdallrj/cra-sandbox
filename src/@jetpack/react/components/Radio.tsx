@@ -2,12 +2,13 @@ import clsx from 'clsx';
 import { CSSProperties } from 'react';
 import useConfig from '../hooks/useConfig';
 
-interface Props extends React.ButtonHTMLAttributes<HTMLInputElement> {
+interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   checked?: boolean;
   className?: string;
   disabled?: boolean;
   inputStyle?: CSSProperties;
   label?: string;
+  name?: string;
   style?: CSSProperties;
   value?: string;
 }
@@ -18,6 +19,7 @@ export default function Radio({
   disabled = false,
   inputStyle,
   label,
+  name,
   style,
   value,
   ...restProps
@@ -38,11 +40,16 @@ export default function Radio({
         checked={checked}
         className={`${prefix}-radio__input`}
         disabled={disabled}
+        name={name}
         style={inputStyle}
         type='radio'
         value={value}
       />
-      {label && <label className={`${prefix}-radio__label`}>{label}</label>}
+      {label && (
+        <label className={`${prefix}-radio__label`} htmlFor={name}>
+          {label}
+        </label>
+      )}
     </div>
   );
 }

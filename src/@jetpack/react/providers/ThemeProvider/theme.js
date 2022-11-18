@@ -38,6 +38,11 @@ header {}
 i {}
 input {}
 input[type='checkbox'] {}
+input:disabled,
+input[disabled] {
+  color: rgba(0, 0, 0, 0.26);
+  cursor: default;
+}
 ins {}
 main {}
 mark {}
@@ -88,8 +93,8 @@ time {}
 .{prefix}-accordion {
   display: flex;
   flex-direction: column;
-  .{prefix}-accordion__item {
-  }
+
+  .{prefix}-accordion__item {}
   .{prefix}-accordion__title {
     background: rgb(0 0 0 / 20%);
     border-top-left-radius: 5px;
@@ -194,6 +199,19 @@ time {}
 
   &__input {}
   &__label {}
+}
+
+/* Custom:TextInput */
+.{prefix}-text-input {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  &--disabled {
+    color: #d1d1d1;
+  }
+
+  &__input {}
 }
 
 /* Custom:Radio */

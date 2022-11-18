@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import useConfig from '../../hooks/useConfig';
+import useConfig from '../hooks/useConfig';
 
 type AccordionProps = {
   children: React.ReactNode;

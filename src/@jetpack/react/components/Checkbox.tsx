@@ -2,12 +2,13 @@ import clsx from 'clsx';
 import { CSSProperties } from 'react';
 import useConfig from '../hooks/useConfig';
 
-interface Props extends React.HTMLProps<HTMLInputElement> {
+interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
   checked?: boolean;
   className?: string;
   disabled?: boolean;
   inputStyle?: CSSProperties;
   label?: string;
+  name?: string;
   style?: CSSProperties;
   value?: string;
 }
@@ -18,10 +19,11 @@ export default function Checkbox({
   disabled = false,
   inputStyle,
   label,
+  name,
   style,
   value,
   ...restProps
-}: Props) {
+}: CheckboxProps) {
   const { prefix } = useConfig();
   return (
     <div
@@ -38,11 +40,16 @@ export default function Checkbox({
         checked={checked}
         className={`${prefix}-checkbox__input`}
         disabled={disabled}
+        name={name}
         style={inputStyle}
         type='checkbox'
         value={value}
       />
-      {label && <label className={`${prefix}-checkbox__label`}>{label}</label>}
+      {label && (
+        <label className={`${prefix}-checkbox__label`} htmlFor={name}>
+          {label}
+        </label>
+      )}
     </div>
   );
 }
